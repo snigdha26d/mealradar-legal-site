@@ -43,4 +43,4 @@ These are static files, so they can be published as-is. Options when you're read
 - [ ] Review with legal counsel if desired.
 - [ ] Keep pages updated when app data practices change.
 
-The real support email (`mealradarapp@gmail.com`) is already set in the pages.
+The real support email (`support@mealradar.xyz`) is already set in the pages.
