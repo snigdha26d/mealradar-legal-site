@@ -1,46 +1,59 @@
 # MealRadar legal-site
 
 Static legal/support pages for the **MealRadar** app, kept isolated from the app
-runtime code. These are **launch-support drafts, not legal advice**, written to
-match the app's current behavior (local-only data, Supabase auth, AI via a
-Supabase Edge Function, in-app account deletion).
+runtime code. They are written to match the app's current behavior (local-first
+data with platform backups outside our control, Supabase auth, AI via a Supabase
+Edge Function, in-app account deletion, subscriptions via Apple App Store and
+Google Play).
+
+These pages are public and referenced from the App Store and Google Play
+listings. Keep them accurate: when app data practices change, update the pages
+and the dates in the same change.
 
 ## Contents
 
 - `index.html` — landing page linking to the resources below
-- `privacy.html` — privacy policy draft
+- `privacy.html` — privacy policy
+- `terms.html` — terms of use
 - `support.html` — support / help page
 - `delete-account.html` — account & data deletion instructions
 - `styles.css` — self-contained styles (no external fonts/CDNs/scripts)
 
 ## Preview locally
 
-No build step. Just open `legal-site/index.html` in a browser (double-click it,
-or drag it into a browser window), then follow the links.
+No build step. Just open `index.html` in a browser (double-click it, or drag it
+into a browser window), then follow the links. All links are relative, so the
+pages work from any base path.
 
-## Publishing later (GitHub Pages)
+## Publishing (GitHub Pages)
 
-These are static files, so they can be published as-is. Options when you're ready:
+This repo is served by GitHub Pages. Pushing to `main` publishes — there is no
+separate build or deploy step, and no staging environment, so review before you
+push.
 
-- **Project Pages from `/docs`:** copy this folder's contents into a `docs/`
-  folder on the default branch and enable GitHub Pages → "Deploy from a branch"
-  → `main` / `docs`. Pages will be served at
-  `https://<user>.github.io/<repo>/`.
-- **Separate repo / `gh-pages` branch:** push these files to a dedicated repo or
-  branch configured for Pages.
-- **`/legal` path:** if hosting elsewhere later, keep relative links (they
-  already are) so the pages work under any base path.
+The Pages source is configured in the repo's **Settings → Pages**, not in this
+repo, so confirm it there if a push ever appears not to take effect. If the
+setup changes later, the alternatives are "Deploy from a branch" using `main` /
+`docs`, or a dedicated `gh-pages` branch.
 
-(Do not publish until the TODOs below are done.)
+## Dates
 
-## TODO before publishing
+`privacy.html` carries both an effective date and a last-updated date;
+`terms.html` carries a last-updated date. Update the last-updated date whenever
+page content changes.
 
-- [ ] Confirm the final public URLs for each page.
-- [ ] Update the App Store Connect Privacy Policy URL.
-- [ ] Update the App Store Support URL.
-- [ ] Update the Google Play privacy policy URL.
-- [ ] Update the Google Play account/data deletion URL (point to `delete-account.html`).
+## Maintenance checklist
+
+Items below are verification steps. Confirm each against the live site and the
+store consoles rather than assuming — this repo cannot prove any of them.
+
+- [ ] Verify the public URL for each page resolves.
+- [ ] Verify the App Store Connect Privacy Policy URL points to `privacy.html`.
+- [ ] Verify the App Store Support URL points to `support.html`.
+- [ ] Verify the Google Play privacy policy URL points to `privacy.html`.
+- [ ] Verify the Google Play account/data deletion URL points to
+      `delete-account.html`.
+- [ ] Verify page content still matches actual app behavior after each release.
 - [ ] Review with legal counsel if desired.
-- [ ] Keep pages updated when app data practices change.
 
 The real support email (`support@mealradar.xyz`) is already set in the pages.
