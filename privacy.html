@@ -26,6 +26,11 @@
       operational records may also remain after account deletion, in addition to
       the anti-abuse record described under <strong>Account deletion</strong>.
       See <strong>Recipe importing</strong> below for details.</p>
+    <p><strong>Supplemental notice ([PUBLICATION DATE]):</strong> Disclosures
+      about recipe import limits, temporary import results, and import
+      identifiers on your device were added on [PUBLICATION DATE]. See
+      <strong>Recipe importing</strong> and <strong>Account deletion</strong>
+      below.</p>
 
     <p>This policy explains how the MealRadar mobile app ("MealRadar", "the app",
       "we") handles your information. It is written in plain language and reflects
@@ -100,7 +105,8 @@
       or website the recipe comes from may also receive a request for the
       publicly available details of that post or page.</p>
     <p>This processing is temporary: our backend does not save the imported
-      recipe, captions, transcripts, or page text to our database. When you save
+      recipe, captions, transcripts, or page text to our database, except for
+      the temporary import results described below. When you save
       an imported recipe, its content — including its source link and image — is
       stored on your device like your other saved recipes. MealRadar does not
       provide cloud recipe syncing.</p>
@@ -117,6 +123,39 @@
       records do not include the recipe, captions, or transcripts. They currently
       have no automatic expiry or scheduled deletion, and they remain after you
       delete your account.</p>
+    <p><strong>Import limits.</strong> Recipe imports are subject to usage
+      limits, including a free import allowance. To apply these limits, our
+      backend keeps records of your imports linked to your account — for
+      example, when an import was made, whether it succeeded, and how many
+      imports you have used. These records may include a coded form of the
+      imported link or shared text, but not the link or text itself. Only
+      successful imports count towards the free allowance.</p>
+    <p>So that the free allowance cannot be claimed again by deleting and
+      re-creating an account, we also keep a record containing a protected code
+      derived from your verified email address (not the email address itself)
+      and the number of free imports used with it. This code is not anonymous:
+      it lets us recognise the same email address again, but it does not
+      contain recipe content. This record is kept after you delete your account
+      and has no automatic expiry, subject to applicable legal
+      requirements.</p>
+    <p><strong>Temporary import results.</strong> If an import succeeds but the
+      result does not reach your device — for example, because your connection
+      drops — MealRadar can give you the same result when you retry, without
+      processing or counting the import again. To do this, our backend may keep
+      a temporary copy of a successful import's result, including the recipe
+      draft, its source link and image link. This applies to imports from links
+      and from shared text, such as a recipe shared from a notes app. The copy
+      is used only to answer a retry of that import and is no longer used after
+      10 minutes; it is then removed from our servers by scheduled cleanup, so
+      it may remain stored briefly after that point. It is also removed if you
+      delete your account.</p>
+    <p><strong>Import identifiers on your device.</strong> To recognise a retry
+      of the same import, including after the app restarts, the app briefly
+      keeps an identifier for each pending import on your device, separately
+      for each account. It does not contain the link or the recipe. It is
+      cleared when the import succeeds or when you delete your account;
+      otherwise it stops being used after a few minutes, although it may remain
+      stored on your device until it is later cleared.</p>
     <p>Crash or error reports may include technical details about recent app
       activity, such as web addresses the app requested, which can include a
       link you imported.</p>
@@ -148,6 +187,14 @@
       recipe import, which may stay in the app's storage until the app is
       uninstalled; and any reports you chose to submit about an AI result,
       including the reason you selected and any optional comment you added.</p>
+    <p>For recipe importing, deleting your account deletes the records of your
+      individual imports, including any temporary import result still stored,
+      and removes your import identifiers from that device. Two records are
+      kept: the protected email record and free-import count described under
+      <strong>Recipe importing</strong>, which has no automatic expiry, subject
+      to applicable legal requirements; and import usage counts linked to your
+      former account, which currently have no automatic expiry. Neither record
+      contains recipe content.</p>
 
     <h2>Selling data, ads, and tracking</h2>
     <p>We do not sell your personal data. The app does not include third-party
@@ -222,7 +269,8 @@
       need to retain it for security, billing, legal compliance, dispute handling,
       fraud or abuse prevention, or another lawful reason. We do not intentionally
       store AI prompts or outputs on our servers unless needed for security,
-      debugging, or legal reasons.</p>
+      debugging, or legal reasons, or briefly to recover an interrupted recipe
+      import (see <strong>Recipe importing</strong>).</p>
     <p class="small muted">OpenAI may retain API data for limited service and
       abuse-monitoring periods under its own policies; we cannot directly delete
       OpenAI's internal logs. Apple, Google Play, and RevenueCat may retain
